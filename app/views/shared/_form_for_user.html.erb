@@ -1,0 +1,21 @@
+<% if @users.empty? %>
+	<h1>No records </h1>
+<% else %>
+<table class="table table-condensed table-striped">
+	<tr>
+		<th colspan="1">User</th>
+		<th colspan="1">Edit User</th>
+		<th colspan="1">Delete User</th>
+		<th colspan="1">User Addresses</th>
+	</tr>
+	<% @users.each do |user| %>
+		<tr>
+			<td><%=user.first_name%> <%=user.last_name%></td>
+			<td><%=link_to 'Edit', edit_user_path(user) %></td>
+			<td><%=link_to 'Delete', user_path(user), method: :delete %></td>
+			<td><%=link_to 'Addresses', user_addresses_path(user) %></td>
+		</tr>
+	<% end %>
+</table>
+<% end %>
+

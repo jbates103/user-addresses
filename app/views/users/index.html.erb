@@ -1,0 +1,5 @@
+<% provide(:title, home_page_title) %>
+
+<%= render 'shared/form_for_user' %>
+
+<%= link_to "Add User", new_user_path, :method => :get, class: "btn btn-primary" %>

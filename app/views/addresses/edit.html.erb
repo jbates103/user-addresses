@@ -1,0 +1,5 @@
+<% provide(:title, edit_address_title)%>
+
+<%= render "shared/add_address_form"%>
+<br>
+<% link_to 'All Addresses', user_addresses_path(@user) , method: :get, class: "btn btn-primary" %>

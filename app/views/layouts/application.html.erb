@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>UsersAddress</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+
+<body>
+	<h1 class="container"><%= yield(:title) %></h1>
+	<header class="container">
+		<% flash.each do |message_type, message |%>
+			<div class="alert alert-<%= message_type %>"><%= message %></div>
+		<% end %>
+	</header>
+	<div class="container">
+		<%= yield %>
+	</div>
+</body>
+</html>
